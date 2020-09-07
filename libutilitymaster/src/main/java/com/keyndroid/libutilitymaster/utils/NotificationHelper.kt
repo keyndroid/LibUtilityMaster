@@ -34,7 +34,7 @@ class NotificationHelper(var context: Context){
 
 
 
-    fun createNOtification(isGroup:Boolean,pos:Int,intent:Intent){
+    fun createNOtification(isGroup:Boolean,pos:Int,intent:Intent, icon:Int){
         val CHANNEL_ID=getChannelId(pos)
         /*var builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
@@ -54,8 +54,8 @@ class NotificationHelper(var context: Context){
 
         val groupId = getGroupIdFromChannelId(pos)
         Log.e("NotificationData","CHANNEL_ID==$CHANNEL_ID==GroupID==$groupId")
-        builder.setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_launcher_foreground))
+        builder.setSmallIcon(icon)
+            .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), icon))
             .setContentTitle("Channel ID= $CHANNEL_ID==GroupId=$groupId")
 
             .setContentText("Much longer text that cannot fit one line...")
