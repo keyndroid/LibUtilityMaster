@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lib Utility Master</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="lbl_ok">OK</string>
+    <string name="open_Settings">Open Settings</string>
+    <string name="permission_never_ask_again_message">You have permanently dined permission. Please goto settings, and allow permission.</string>
+    <string name="ttl_file_picker_option">Select option</string>
+    <string name="err_image">Can not find the Image</string>
+
+</resources>

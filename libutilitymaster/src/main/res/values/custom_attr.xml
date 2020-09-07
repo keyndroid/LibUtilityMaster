@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font_regular">font_regular.otf</string>
+    <attr name="customFont" format="string|reference">
+        <!--<reference name="bold" value="qweqwe.ttf" />
+        <reference name="light" value="qwe" />
+        <reference name="medium" value="qweqwe" />
+        <reference name="regular" value="font_regular.otf"/>--><!--@string/font_regular</enum>-->
+    </attr>
+    <declare-styleable name="CustomButton">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="CustomCheckBox">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="CustomEditText">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="CustomRadioButton">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="CustomTextInputLayout">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="CustomTextView">
+        <attr name="customFont" />
+    </declare-styleable>
+    <declare-styleable name="CustomImageView">
+        <attr name="hideLoader" format="boolean" />
+        <attr name="error" format="reference" />
+        <attr name="imageId" format="reference"/>
+    </declare-styleable>
+
+
+</resources>
