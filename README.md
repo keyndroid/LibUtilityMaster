@@ -1,4 +1,4 @@
-# LibUtilityMaster
+# LibUtilityMaster for Kotlin
 
 [![Release](https://jitpack.io/v/jitpack/android-example.svg)](https://jitpack.io/#keyndroid/LibUtilityMaster)
 
@@ -23,7 +23,7 @@ dependencies {
 
 # Permission Utility
 
-You can use this code for permission
+You can use this code for asking permission
 
 ```
 val permissionBuilder = PermissionUtils.Builder().setContenxt(this)
@@ -39,3 +39,15 @@ permissionBuilder.addPermission(EnumHelper.Permission.STORAGE)
         })
         .build()
 ```
+
+Here you can also add multipler permissions simultaneously
+
+```
+permissionBuilder.addPermission(
+                    EnumHelper.Permission.CAMERA,
+                    EnumHelper.Permission.STORAGE
+                )
+```
+
+
+
