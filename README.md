@@ -21,3 +21,21 @@ dependencies {
 }
 ```
 
+# Permission Utility
+
+You can use this code for permission
+
+```
+val permissionBuilder = PermissionUtils.Builder().setContenxt(this)
+permissionBuilder.addPermission(EnumHelper.Permission.STORAGE)
+ permissionBuilder.setCallbackPermission(object : CallbackPermission {
+            override fun onPermissionDenied() {
+               
+            }
+
+            override fun onPermissionGranted() {
+               
+            }
+        })
+        .build()
+```
