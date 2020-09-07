@@ -1,7 +1,9 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.keyndroid'
+version='1.0.1'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
@@ -10,8 +12,8 @@ android {
 //        applicationId "com.keyndroid.libutilitymaster"
         minSdkVersion 21
         targetSdkVersion 30
-//        versionCode 1
-//        versionName "1.0"
+        versionCode 1
+        versionName "1.0"
 
 //        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
