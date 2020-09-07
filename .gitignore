@@ -12,3 +12,7 @@
 /captures
 .externalNativeBuild
 .cxx
+/.idea/
+/build/
+/app/build/
+/libutilitymaster/build/
