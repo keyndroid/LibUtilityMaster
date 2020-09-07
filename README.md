@@ -4,7 +4,7 @@
 
 LibUtilityMaster library that works with jitpack.io.
 
-Add it to your build.gradle with:
+Add it to your project level build.gradle with:
 ```gradle
 allprojects {
     repositories {
@@ -13,7 +13,7 @@ allprojects {
 }
 ```
 
-and:
+and to your app level build.gradle:
 
 ```gradle
 dependencies {
@@ -22,6 +22,20 @@ dependencies {
 ```
 
 # Permission Utility
+
+First you need to add permission in your AndroidManifest.xml
+
+```
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
+
+Also you need to add this activity in your AndroidManifest.xml
+
+```
+<activity android:name="com.demo.libutility.utility.permission.PermissionActivity"
+          android:theme="@style/Theme.Transparent"
+          />
+```
 
 You can use this code for asking permission
 
@@ -40,7 +54,7 @@ permissionBuilder.addPermission(EnumHelper.Permission.STORAGE)
         .build()
 ```
 
-Here you can also add multipler permissions simultaneously
+Here you can also add multiple permissions simultaneously
 
 ```
 permissionBuilder.addPermission(
@@ -48,6 +62,61 @@ permissionBuilder.addPermission(
                     EnumHelper.Permission.STORAGE
                 )
 ```
+
+
+# FilePicker Utility
+
+you need to add this activity in your AndroidManifest.xml
+
+```
+<activity android:name="com.demo.libutility.utility.gallery.FilePickerActivity"
+          android:theme="@style/Theme.Transparent"
+          />
+```
+
+Now you need to open file picker dialog for according to your requirements.
+Here I have added 3 
+```
+ val fileBuilder = FileHelper.Builder(this)
+                .addFilerPicker(EnumHelper.FilePicker.CAMERA)
+                .addFilerPicker(EnumHelper.FilePicker.GALLERY)
+                .addFilerPicker(EnumHelper.FilePicker.FILE)
+                .addFileMimeType(MimeUtils.getType(".pdf"))
+                .setCallbackPermission(object : CallbackFileSelection {
+
+
+                    override fun onFileSelectionFile(fileData: FileData) {
+                       
+                    }
+
+                    override fun onFileSelectionError(message: String) {
+
+                    }
+                })
+```
+
+
+Incaase you want to open multiple Images from gallery, you can add this extra line (This is optional, by default 1 Image will be selected)
+
+```
+fileBuilder.addMaxImage(countBalue)
+```
+
+At the end you can build file picker
+
+```
+fileBuilder.build()
+```
+
+when you adding file picker you need to pass MIME type for it. You can add any MIME type i.e.   gif,pdf,apk,mp3,aac,midi,mp4,png,jpg etc.
+
+```
+ fileBuilder.addFilerPicker(EnumHelper.FilePicker.FILE)
+            .addFileMimeType(MimeUtils.getType(".pdf")) 
+```
+
+
+
 
 
 
