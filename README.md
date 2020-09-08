@@ -1,6 +1,5 @@
 # LibUtilityMaster for Kotlin
 
-[![Release](https://jitpack.io/v/jitpack/android-example.svg)](https://jitpack.io/#keyndroid/LibUtilityMaster)
 [![](https://jitpack.io/v/keyndroid/LibUtilityMaster.svg)](https://jitpack.io/#keyndroid/LibUtilityMaster)
 
 
