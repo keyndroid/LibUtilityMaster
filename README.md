@@ -33,7 +33,7 @@ First you need to add permission in your AndroidManifest.xml
 Also you need to add this activity in your AndroidManifest.xml
 
 ```
-<activity android:name="com.demo.libutility.utility.permission.PermissionActivity"
+<activity android:name="com.keyndroid.libutilitymaster.permission.PermissionActivity"
           android:theme="@style/Theme.Transparent"
           />
 ```
@@ -70,7 +70,7 @@ permissionBuilder.addPermission(
 you need to add this activity in your AndroidManifest.xml
 
 ```
-<activity android:name="com.demo.libutility.utility.gallery.FilePickerActivity"
+<activity android:name="com.developer.cowregistry.lib.gallery.FilePickerActivity"
           android:theme="@style/Theme.Transparent"
           />
 ```
