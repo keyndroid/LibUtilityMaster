@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.keyndroid.libutilitymaster.views.CustomImageView
+            android:id="@+id/ivGallery"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:error="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button3">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+        </com.keyndroid.libutilitymaster.views.CustomImageView>
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Open Image Picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCount" />
+
+        <com.keyndroid.libutilitymaster.views.CustomEditText
+            android:id="@+id/etCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Max Image Number (Max 10)"
+            android:inputType="number"
+            android:maxLength="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImagePicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivGallery"
+            android:layout_marginBottom="64dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

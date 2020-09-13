@@ -2,20 +2,53 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.libutilitymaster.sample">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.activity.SampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.ImagePickerActivity"/>
+
+
+        <activity android:name="com.keyndroid.libutilitymaster.permission.PermissionActivity"
+            android:theme="@style/Theme.Transparent"
+            />
+        <activity android:name="com.developer.cowregistry.lib.gallery.FilePickerActivity"
+            android:theme="@style/Theme.Transparent"
+            />
+        <activity android:name=".ui.activity.GalleryActivity"/>
+        <!-- <provider
+             android:name="androidx.core.content.FileProvider"
+             android:authorities="com.mydomain.fileprovider"
+             android:exported="false"
+             android:grantUriPermissions="true">
+         </provider>-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
     </application>
 
 </manifest>

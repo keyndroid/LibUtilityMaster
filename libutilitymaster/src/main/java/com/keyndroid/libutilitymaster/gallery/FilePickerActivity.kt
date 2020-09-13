@@ -9,13 +9,12 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.text.TextUtils
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import com.keyndroid.libutilitymaster.R
 import com.keyndroid.libutilitymaster.dialogs.MaterialDialogs
 import com.keyndroid.libutilitymaster.gallery.FileData
-import com.keyndroid.libutilitymaster.gallery.ImageUtils
+import com.keyndroid.libutilitymaster.gallery.FileUtils
 import com.keyndroid.libutilitymaster.gallery.interfaces.CallbackFileSelection
 import com.keyndroid.libutilitymaster.permission.CallbackPermission
 import com.keyndroid.libutilitymaster.permission.PermissionUtils
@@ -25,7 +24,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.io.File
 import java.io.IOException
-import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,7 +32,7 @@ import java.util.*
  * Created by Keyur on 20,September,2019
  * Carefully handle this activity because you have to finish it in every case
  */
-internal class FilePickerActivity : AppCompatActivity() {
+open class FilePickerActivity : AppCompatActivity() {
     lateinit var outPutfileUri: Uri
     lateinit var imageFilePath: String
 
@@ -185,7 +183,7 @@ internal class FilePickerActivity : AppCompatActivity() {
     fun openCamera() {
         val captureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 //        val file = File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg")
-        val file2 = ImageUtils().createImageFile(this)
+        val file2 = FileUtils().createImageFile(this)
         imageFilePath = file2.absolutePath
         outPutfileUri = FileProvider.getUriForFile(
             this,
@@ -330,7 +328,7 @@ internal class FilePickerActivity : AppCompatActivity() {
             for (i in 0..fileData.listFilePath.size - 1) {
                 val filePath = fileData.listFilePath.get(i)
                 if (MimeUtils.getType(filePath).contains("image/", true)) {
-                    val imagePathCompressed = ImageUtils().compressImage(this@FilePickerActivity,filePath)
+                    val imagePathCompressed = FileUtils().compressImage(this@FilePickerActivity,filePath)
 //                    val compressedImageFile = Compressor.compress(this@FilePickerActivity, File(filePath)){
 //                        default()
 //                        destination(ImageUtils().createImageFile())
@@ -395,7 +393,7 @@ internal class FilePickerActivity : AppCompatActivity() {
 
     private fun clearData() {
         if (::imageFilePath.isInitialized) {
-            ImageUtils().deleteRecursive(ImageUtils().getMyFolderPath(this))
+            FileUtils().deleteRecursive(FileUtils().getMyFolderPath(this))
         }
     }
 

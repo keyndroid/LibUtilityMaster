@@ -2,9 +2,7 @@ package com.keyndroid.libutilitymaster.gallery
 
 import android.content.Context
 import android.graphics.*
-import android.media.ExifInterface
-import android.os.Environment
-import android.util.Log
+import androidx.exifinterface.media.ExifInterface
 import com.keyndroid.libutilitymaster.utils.FOLDER_NAME
 import java.io.File
 import java.io.FileNotFoundException
@@ -16,7 +14,7 @@ import java.util.*
 /**
  * Created by Keyur on 23,September,2019
  */
-internal class ImageUtils {
+internal class FileUtils {
     companion object {
         val IMAGE_EXTENSION = ".jpg"
     }
@@ -48,7 +46,7 @@ internal class ImageUtils {
     }
 
     fun getMyFolderPath(context: Context): File {
-        return File(getDataRoot(context), FOLDER_NAME)
+        return /*File(getDataRoot(context), FOLDER_NAME)*/getDataRoot(context)!!
     }
 
     private fun getDataRoot(context: Context): File? {
@@ -61,7 +59,7 @@ internal class ImageUtils {
             } else {
                 Environment.getDataDirectory()
             }*/
-            return context.getExternalFilesDir("Cow")
+            return context.getExternalFilesDir(FOLDER_NAME)
         } catch (e: Exception) {
             return null
         }
@@ -78,7 +76,7 @@ internal class ImageUtils {
 //
 //        }
     public fun clearData(context: Context) {
-        ImageUtils().deleteRecursive(ImageUtils().getMyFolderPath(context ))
+        FileUtils().deleteRecursive(FileUtils().getMyFolderPath(context ))
     }
     fun deleteRecursive(fileOrDirectory: File) {
 

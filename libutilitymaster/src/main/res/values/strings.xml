@@ -7,4 +7,26 @@
     <string name="ttl_file_picker_option">Select option</string>
     <string name="err_image">Can not find the Image</string>
 
+    <string-array name="list_images">
+        <item>https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500</item>
+        <item>https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500</item>
+        <item>https://images.pexels.com/photos/358457/pexels-photo-358457.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500</item>
+        <item>https://wallpaperplay.com/walls/full/1/7/4/286153.jpg</item>
+        <item>https://image.shutterstock.com/image-photo/landscape-sunset-nature-flower-tung-260nw-235065658.jpg</item>
+        <item>https://wallpaperaccess.com/full/168083.jpg</item>
+        <item>https://i.pinimg.com/originals/f8/b6/9e/f8b69e6156999b84137f3f0a23701b75.jpg</item>
+        <item>https://wallpaperplay.com/walls/full/2/0/5/351254.jpg</item>
+        <item>https://image.shutterstock.com/image-photo/green-nature-copy-space-using-260nw-405950530.jpg</item>
+        <item>https://webneel.com/wallpaper/sites/default/files/images/08-2018/3-nature-wallpaper-mountain.jpg</item>
+        <item>http://getwallpapers.com/wallpaper/full/e/b/2/1053590-full-size-best-nature-wallpaper-1920x1200.jpg</item>
+        <item>https://cdn.guidingtech.com/media/assets/WordPress-Import/2017/06/img-12.jpg</item>
+        <item>http://s1.picswalls.com/wallpapers/2016/03/29/awesome-beautiful-nature-wallpaper_042319501_304.jpg</item>
+        <item>https://i.pinimg.com/originals/d2/ca/4d/d2ca4dd91c88ea985f80d3b14db91c19.png</item>
+        <item>https://www.pixelstalk.net/wp-content/uploads/2016/06/Download-hd-nature-wallpaper.jpg</item>
+        <item>https://wallpaperaccess.com/full/31191.jpg</item>
+        <item>https://wallpaperplay.com/walls/full/6/9/4/139651.jpg</item>
+        <item>https://technobb.com/wp-content/uploads/2018/06/8qiV323-1024x576.jpg</item>
+        <item>http://getwallpapers.com/wallpaper/full/5/1/a/151798.jpg</item>
+
+    </string-array>
 </resources>
